@@ -18,8 +18,8 @@ badges
 end
 
 def assign_rooms(attendees)
-  attendees.each_with_index do |name, index|
-    "Hello, #{name}! You'll be assigned to room #{index + 1}!".map
+  attendees.each_with_index.map do |name, index|
+    "Hello, #{name}! You'll be assigned to room #{index + 1}!"
   end
 end
 
