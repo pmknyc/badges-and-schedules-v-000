@@ -17,11 +17,17 @@ badges
 # binding.pry
 end
 
-def assign_rooms
-
-
+def assign_rooms(attendees)
+  attendees.map.with_index do |name, index|
+    puts "Hello, #{name}! You'll be assigned to room #{index + 1}!"
+  end
 end
+
 def printer
-  batch_badge_creator.each {|badge| puts "Hello, my name is #{name}."}
-  assign_rooms.each {|room_message| puts "Hello, #{name}! You'll be assigned to room #{room}!"}
+  batch_badge_creator(attendees).each do |name| 
+    puts "Hello, my name is #{name}."
+  end
+  assign_rooms.each do |room_message| 
+    puts "Hello, #{name}! You'll be assigned to room #{room}!"
+  end
 end
